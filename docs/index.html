@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>splunk-expert — Claude Code Plugin</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --surface: #161b22;
+    --border: #21262d;
+    --accent: #ec6f33;
+    --accent2: #5c8dde;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #3fb950;
+    --code-bg: #1c2128;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo { font-size: 2rem; }
+  .brand h1 { font-size: 1.5rem; font-weight: 700; color: var(--text); }
+  .brand p { color: var(--muted); font-size: 0.9rem; }
+  .badge {
+    margin-left: auto;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p { color: var(--muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto 2rem; }
+
+  .install-box {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+  }
+  .install-box .label { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+  .install-box code { color: var(--green); font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.9rem; display: block; line-height: 2; }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 1rem 0;
+  }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2rem; font-weight: 700; color: var(--accent); }
+  .stat .lbl { color: var(--muted); font-size: 0.85rem; }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+  h3.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+  }
+  .skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    transition: border-color 0.15s;
+  }
+  .skill-card:hover { border-color: var(--accent); }
+  .skill-card .name {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: var(--accent2);
+    margin-bottom: 0.4rem;
+  }
+  .skill-card .desc { color: var(--muted); font-size: 0.875rem; line-height: 1.5; }
+
+  .usage-block {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .usage-block code { color: var(--green); font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.875rem; display: block; line-height: 2; }
+
+  footer {
+    text-align: center;
+    padding: 2.5rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+  }
+  footer a { color: var(--accent2); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🔍</div>
+  <div class="brand">
+    <h1>splunk-expert</h1>
+    <p>Claude Code Plugin · 26 Expert Splunk Skills</p>
+  </div>
+  <span class="badge">v1.2.0</span>
+</header>
+
+<div class="hero">
+  <h2>Expert Splunk knowledge, zero token waste</h2>
+  <p>26 focused, independently-triggering skills covering every major Splunk workflow — from SPL to ITSI, SC4S to MLTK.</p>
+
+  <div class="install-box">
+    <div class="label">Install</div>
+    <code>/plugin marketplace add cmwema/splunk-expert</code>
+    <code>/plugin install splunk-expert@splunk-expert-marketplace</code>
+    <code>/reload-plugins</code>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="num">26</div><div class="lbl">Skills</div></div>
+  <div class="stat"><div class="num">0</div><div class="lbl">Token bloat</div></div>
+  <div class="stat"><div class="num">9.x</div><div class="lbl">Splunk Enterprise</div></div>
+</div>
+
+<main>
+
+  <h3 class="section-title">Search &amp; SPL</h3>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="name">splunk-spl</div><div class="desc">Write, debug, and optimize SPL — stats, tstats, eval, lookups, macros, scheduled searches.</div></div>
+    <div class="skill-card"><div class="name">splunk-machine-learning</div><div class="desc">MLTK — anomaly detection, forecasting, classification, regression, MLflow, model persistence.</div></div>
+    <div class="skill-card"><div class="name">splunk-workload-mgmt</div><div class="desc">Workload pools, admission rules, search quotas, scheduler tuning, search head capacity.</div></div>
+  </div>
+
+  <h3 class="section-title">Configuration Files</h3>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="name">splunk-conf-props</div><div class="desc">props.conf — line breaking, timestamps, field extractions, KV_MODE.</div></div>
+    <div class="skill-card"><div class="name">splunk-conf-transforms</div><div class="desc">transforms.conf — regex transforms, routing, lookup definitions, masking.</div></div>
+    <div class="skill-card"><div class="name">splunk-conf-inputs</div><div class="desc">inputs.conf — monitor, scripted, modular inputs, HEC stanzas, WinEventLog.</div></div>
+    <div class="skill-card"><div class="name">splunk-conf-indexes</div><div class="desc">indexes.conf — bucket lifecycle, retention tiers, volumes, sizing.</div></div>
+    <div class="skill-card"><div class="name">splunk-conf-server</div><div class="desc">server.conf — clustering, SHC, KV store, licensing, SSL/TLS.</div></div>
+  </div>
+
+  <h3 class="section-title">Data Collection &amp; Ingestion</h3>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="name">splunk-ingestion-pipeline</div><div class="desc">Architecture decisions — UF vs HF vs HEC vs SC4S, index design, retention, normalization.</div></div>
+    <div class="skill-card"><div class="name">splunk-hec</div><div class="desc">HEC token management, batching, indexer acknowledgment, troubleshooting, Fluent Bit/vector.</div></div>
+    <div class="skill-card"><div class="name">splunk-sc4s</div><div class="desc">SC4S parser development, syslog-ng config, filtering, routing, performance tuning.</div></div>
+    <div class="skill-card"><div class="name">splunk-log-triage</div><div class="desc">Raw log/syslog identification — sourcetype, format, CIM mapping, ingestion path.</div></div>
+    <div class="skill-card"><div class="name">splunk-deployment-server</div><div class="desc">Deployment server — serverclass.conf, deploymentclient.conf, forwarder fleet management.</div></div>
+  </div>
+
+  <h3 class="section-title">App &amp; TA Development</h3>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="name">splunk-ta</div><div class="desc">TA/DA/SA scaffolding, CIM eventtypes/tags, custom REST handlers, AppInspect, Splunkbase.</div></div>
+    <div class="skill-card"><div class="name">splunk-cim-compliance</div><div class="desc">CIM normalization — FIELDALIAS, eventtypes, tags, data model validation workflow.</div></div>
+    <div class="skill-card"><div class="name">splunk-rest-api</div><div class="desc">Splunk REST API, Python SDK (splunklib), search job lifecycle, custom endpoints.</div></div>
+    <div class="skill-card"><div class="name">splunk-alert-actions</div><div class="desc">Custom/modular alert actions, webhook notifications, throttling, AppInspect packaging.</div></div>
+    <div class="skill-card"><div class="name">splunk-kvstore</div><div class="desc">KV Store collections, SPL lookups, REST API access, SHC replication, backup/restore.</div></div>
+  </div>
+
+  <h3 class="section-title">Dashboards &amp; UI</h3>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="name">splunk-dashboards</div><div class="desc">Dashboard Studio — JSON, tokens, data source bindings, trellis, drilldown, performance.</div></div>
+    <div class="skill-card"><div class="name">splunk-ui-toolkit</div><div class="desc">Splunk UI Toolkit — @splunk/react-ui, @splunk/create, SplunkJS Stack, custom components.</div></div>
+  </div>
+
+  <h3 class="section-title">Infrastructure &amp; Architecture</h3>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="name">splunk-distributed</div><div class="desc">Indexer clustering, SHC, cluster manager, deployer, Monitoring Console.</div></div>
+    <div class="skill-card"><div class="name">splunk-authentication</div><div class="desc">LDAP/AD, SAML SSO, roles, capabilities, index access control, token auth, audit.</div></div>
+    <div class="skill-card"><div class="name">splunk-linux</div><div class="desc">Linux host tuning/hardening — ulimits, THP, XFS, systemd, SELinux, NTP for Splunk/SC4S.</div></div>
+    <div class="skill-card"><div class="name">splunk-windows</div><div class="desc">Windows UF, WinEventLog, Sysmon, perfmon, service account, firewall rules.</div></div>
+  </div>
+
+  <h3 class="section-title">Splunk Platforms</h3>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="name">splunk-itsi</div><div class="desc">ITSI — service trees, KPIs, glass tables, episodes, adaptive thresholds, health scores.</div></div>
+    <div class="skill-card"><div class="name">splunk-soar</div><div class="desc">SOAR playbooks, custom Python actions, asset config, REST integration, idempotency.</div></div>
+  </div>
+
+  <h3 class="section-title">Usage</h3>
+  <div class="usage-block">
+    <code># Skills auto-trigger based on your question context</code>
+    <code># Or invoke explicitly:</code>
+    <code>/splunk-expert:splunk-spl</code>
+    <code>/splunk-expert:splunk-hec</code>
+    <code>/splunk-expert:splunk-authentication</code>
+  </div>
+
+</main>
+
+<footer>
+  <p>
+    <a href="https://github.com/cmwema/splunk-expert">GitHub</a> ·
+    <a href="https://github.com/cmwema/splunk-expert/wiki">Wiki</a> ·
+    MIT License · Built for Splunk Enterprise 9.x
+  </p>
+</footer>
+
+</body>
+</html>
