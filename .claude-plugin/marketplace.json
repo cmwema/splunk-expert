@@ -1,0 +1,42 @@
+{
+  "name": "splunk-expert-marketplace",
+  "owner": {
+    "name": "Caleb"
+  },
+  "metadata": {
+    "description": "Marketplace hosting the splunk-expert plugin: 18 expert Splunk Enterprise and SC4S skills.",
+    "version": "1.1.0"
+  },
+  "plugins": [
+    {
+      "name": "splunk-expert",
+      "source": "./",
+      "description": "Expert-level Splunk Enterprise skills covering SPL, conf file management, SC4S, CIM compliance, TA/app development, ITSI, SOAR, distributed architecture, deployment server, dashboards, ingestion pipeline design, the Splunk UI Toolkit, log triage, and Linux host tuning.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Caleb"
+      },
+      "strict": false,
+      "skills": [
+        "./skills/splunk-cim-compliance",
+        "./skills/splunk-conf-indexes",
+        "./skills/splunk-conf-inputs",
+        "./skills/splunk-conf-props",
+        "./skills/splunk-conf-server",
+        "./skills/splunk-conf-transforms",
+        "./skills/splunk-dashboards",
+        "./skills/splunk-deployment-server",
+        "./skills/splunk-distributed",
+        "./skills/splunk-ingestion-pipeline",
+        "./skills/splunk-itsi",
+        "./skills/splunk-linux",
+        "./skills/splunk-log-triage",
+        "./skills/splunk-sc4s",
+        "./skills/splunk-soar",
+        "./skills/splunk-spl",
+        "./skills/splunk-ta",
+        "./skills/splunk-ui-toolkit"
+      ]
+    }
+  ]
+}
