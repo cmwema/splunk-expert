@@ -1,6 +1,6 @@
 # splunk-expert
 
-A Claude Code plugin bundling 18 expert-level Splunk Enterprise and SC4S skills. Each skill is a focused, independently-triggering `SKILL.md` router with scoped reference files — no monolithic skill, no token waste on irrelevant context.
+A Claude Code plugin bundling 26 expert-level Splunk Enterprise and SC4S skills. Each skill is a focused, independently-triggering `SKILL.md` router with scoped reference files — no monolithic skill, no token waste on irrelevant context.
 
 ## Skills included
 
@@ -24,6 +24,14 @@ A Claude Code plugin bundling 18 expert-level Splunk Enterprise and SC4S skills.
 | `splunk-dashboards` | Dashboard Studio — JSON, tokens, data sources, trellis, drilldown |
 | `splunk-ui-toolkit` | Splunk UI Toolkit (SUIT) — @splunk/react-ui, @splunk/create, SplunkJS Stack |
 | `splunk-linux` | Linux host tuning/hardening for Splunk and SC4S hosts |
+| `splunk-alert-actions` | Custom/modular alert actions, webhook notifications, alert throttling, AppInspect |
+| `splunk-rest-api` | Splunk REST API, Python SDK (splunklib), search job lifecycle, custom endpoints |
+| `splunk-windows` | Windows UF config, WinEventLog, Sysmon, perfmon, service account, firewall |
+| `splunk-hec` | HEC token management, batching, indexer ack, troubleshooting, Fluent Bit/vector |
+| `splunk-authentication` | LDAP/AD, SAML SSO, roles, capabilities, index access, token auth, audit |
+| `splunk-kvstore` | KV Store collections, SPL lookups, REST API, SHC replication, backup/restore |
+| `splunk-machine-learning` | MLTK — anomaly detection, forecasting, classification, MLflow, model persistence |
+| `splunk-workload-mgmt` | Workload pools, admission rules, search quotas, scheduler tuning, capacity |
 
 All skills default to **Splunk Enterprise 9.x** and assume admin access unless a task says otherwise.
 
@@ -64,7 +72,7 @@ Each `SKILL.md` is a thin router; the substantive guidance lives in `references/
 
 ## Versioning
 
-Current version: **1.1.0** — 18 skills, post-merge of `splunk-ui-toolkit`, `splunk-cim-compliance`, `splunk-deployment-server`, and `splunk-ingestion-pipeline`.
+Current version: **1.2.0** — 26 skills. Added `splunk-alert-actions`, `splunk-rest-api`, `splunk-windows`, `splunk-hec`, `splunk-authentication`, `splunk-kvstore`, `splunk-machine-learning`, `splunk-workload-mgmt`.
 
 ## License
 
