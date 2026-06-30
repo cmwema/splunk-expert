@@ -2,6 +2,8 @@
 
 A Claude Code plugin bundling 26 expert-level Splunk Enterprise and SC4S skills. Each skill is a focused, independently-triggering `SKILL.md` router with scoped reference files — no monolithic skill, no token waste on irrelevant context.
 
+**[📖 Wiki](https://github.com/cmwema/splunk-expert/wiki)** · **[🌐 GitHub Pages](https://cmwema.github.io/splunk-expert/)**
+
 ## Skills included
 
 | Skill | Covers |
@@ -69,6 +71,16 @@ splunk-expert/
 ```
 
 Each `SKILL.md` is a thin router; the substantive guidance lives in `references/` and is loaded on demand to keep context usage low.
+
+## Docs
+
+| Resource | URL |
+|---|---|
+| GitHub Pages | https://cmwema.github.io/splunk-expert/ |
+| Wiki — Home | https://github.com/cmwema/splunk-expert/wiki |
+| Wiki — Skills Reference | https://github.com/cmwema/splunk-expert/wiki/Skills-Reference |
+
+Both are auto-updated on every push to `main` via `.github/workflows/update-docs.yml`.
 
 ## Versioning
 
