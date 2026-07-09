@@ -1,7 +1,7 @@
 {
   "name": "splunk-expert",
-  "version": "1.2.0",
-  "description": "Expert-level Splunk Enterprise skills covering SPL, conf file management (props, transforms, server, indexes, inputs), SC4S, CIM compliance, TA/app development, ITSI, SOAR, distributed architecture, deployment server, dashboards, ingestion pipeline design, the Splunk UI Toolkit, log triage, Linux host tuning, HEC, Windows host, alert actions, REST API, authentication, KV Store, MLTK, and workload management.",
+  "version": "1.3.0",
+  "description": "Expert-level Splunk Enterprise skills covering SPL, conf file management (props, transforms, server, indexes, inputs), SC4S, CIM compliance, TA/app development, app packaging, ITSI, SOAR, distributed architecture, deployment server, dashboards, ingestion pipeline design, the Splunk UI Toolkit, log triage, Linux host tuning, HEC, Windows host, alert actions, REST API, authentication, KV Store, MLTK, and workload management.",
   "author": {
     "name": "Caleb"
   },
@@ -24,6 +24,7 @@
     "authentication",
     "workload-management",
     "rest-api",
-    "alert-actions"
+    "alert-actions",
+    "app-packaging"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "splunk-expert-marketplace",
-  "description": "18 expert-level Splunk Enterprise and SC4S skills covering SPL, conf files, CIM, TA development, ITSI, SOAR, distributed architecture, dashboards, ingestion pipeline design, and Linux host tuning.",
+  "description": "27 expert-level Splunk Enterprise and SC4S skills covering SPL, conf files, CIM, TA development, app packaging, ITSI, SOAR, distributed architecture, dashboards, ingestion pipeline design, and Linux host tuning.",
   "owner": {
     "name": "Caleb"
   },

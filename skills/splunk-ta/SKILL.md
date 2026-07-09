@@ -3,10 +3,10 @@ name: splunk-ta
 description: >-
   Splunk Technology Add-on (TA) and app development. Trigger for: building a TA,
   creating a TA skeleton, CIM normalization, FIELDALIAS, EVAL-based field mapping,
-  eventtypes.conf, tags.conf, AppInspect, app packaging, app.conf, default.meta,
+  eventtypes.conf, tags.conf, AppInspect, app.conf, default.meta,
   custom REST handlers, non-EAI persistent REST handlers,
   PersistentServerConnectionApplication, restmap.conf, web.conf, SA- or DA-
-  add-ons, Splunkbase submission. Default: Splunk Enterprise 9.x, Python 3.x.
+  add-ons. Default: Splunk Enterprise 9.x, Python 3.x.
 ---
 
 # Splunk TA / App Development
@@ -17,7 +17,8 @@ Router only. Read `references/ta-development.md` for all TA and app tasks.
 
 | Task | Action |
 |---|---|
-| TA scaffold, CIM mapping, AppInspect, packaging, REST handlers | Read `references/ta-development.md` |
+| TA scaffold, CIM mapping, AppInspect, REST handlers | Read `references/ta-development.md` |
+| Building the distributable .tar.gz itself | Defer to `splunk-app-packaging` |
 
 ## Shared conventions
 

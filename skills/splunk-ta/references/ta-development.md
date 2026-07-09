@@ -173,5 +173,7 @@ distribution.
 
 ## Packaging
 
-A TA is a tarball of the app directory: `tar -czf TA-acme-firewall.tgz TA-acme-firewall/`.
-Exclude `local/` and `.pyc`/`__pycache__` from distributed packages — ship `default/` only.
+A TA is a tarball of the app directory, with the top-level directory name matching `[package] id`
+in `app.conf`. For the full build process — what to exclude, avoiding a self-included/nested
+archive, version-bump conventions, and verifying the result before shipping — see
+`splunk-app-packaging`.

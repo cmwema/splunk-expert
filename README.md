@@ -1,6 +1,6 @@
 # splunk-expert
 
-A Claude Code plugin bundling 26 expert-level Splunk Enterprise and SC4S skills. Each skill is a focused, independently-triggering `SKILL.md` router with scoped reference files — no monolithic skill, no token waste on irrelevant context.
+A Claude Code plugin bundling 27 expert-level Splunk Enterprise and SC4S skills. Each skill is a focused, independently-triggering `SKILL.md` router with scoped reference files — no monolithic skill, no token waste on irrelevant context.
 
 **[📖 Wiki](https://github.com/cmwema/splunk-expert/wiki)** · **[🌐 GitHub Pages](https://cmwema.github.io/splunk-expert/)**
 
@@ -15,6 +15,7 @@ A Claude Code plugin bundling 26 expert-level Splunk Enterprise and SC4S skills.
 | `splunk-conf-indexes` | indexes.conf — bucket lifecycle, retention, volumes, sizing |
 | `splunk-conf-inputs` | inputs.conf — monitor/scripted/modular inputs, HEC, WinEventLog |
 | `splunk-ta` | TA/app development, CIM eventtypes/tags, custom REST handlers, AppInspect |
+| `splunk-app-packaging` | Building a clean installable .tar.gz — exclusions, version bump, avoiding nested/self-included packages |
 | `splunk-cim-compliance` | CIM normalization workflow — FIELDALIAS, eventtypes, tags, data model validation |
 | `splunk-sc4s` | SC4S parser development, syslog-ng config, filtering, routing, tuning |
 | `splunk-log-triage` | Raw log/syslog identification — sourcetype, format, ingestion path triage |
@@ -84,7 +85,7 @@ Both are auto-updated on every push to `main` via `.github/workflows/update-docs
 
 ## Versioning
 
-Current version: **1.2.0** — 26 skills. Added `splunk-alert-actions`, `splunk-rest-api`, `splunk-windows`, `splunk-hec`, `splunk-authentication`, `splunk-kvstore`, `splunk-machine-learning`, `splunk-workload-mgmt`.
+Current version: **1.3.0** — 27 skills. Added `splunk-app-packaging`.
 
 ## License
 
