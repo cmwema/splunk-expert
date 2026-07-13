@@ -24,7 +24,7 @@ A Claude Code plugin bundling 27 expert-level Splunk Enterprise and SC4S skills.
 | `splunk-soar` | SOAR playbooks, custom Python actions, asset config |
 | `splunk-distributed` | Indexer clustering, SHC, cluster manager, deployer, MC |
 | `splunk-deployment-server` | Deployment server — serverclass.conf, deploymentclient.conf, forwarder management |
-| `splunk-dashboards` | Dashboard Studio — JSON, tokens, data sources, trellis, drilldown |
+| `splunk-dashboards` | Dashboard Studio — JSON, tokens, data sources, trellis, drilldown; also Simple XML view validation |
 | `splunk-ui-toolkit` | Splunk UI Toolkit (SUIT) — @splunk/react-ui, @splunk/create, SplunkJS Stack |
 | `splunk-linux` | Linux host tuning/hardening for Splunk and SC4S hosts |
 | `splunk-alert-actions` | Custom/modular alert actions, webhook notifications, alert throttling, AppInspect |
@@ -45,6 +45,39 @@ All skills default to **Splunk Enterprise 9.x** and assume admin access unless a
 /plugin install splunk-expert@splunk-expert-marketplace
 /reload-plugins
 ```
+
+## Updating
+
+When a new skill or fix lands on `main`, pull it into an existing install:
+
+```bash
+claude plugin marketplace update splunk-expert-marketplace
+claude plugin update splunk-expert@splunk-expert-marketplace
+```
+
+Then restart Claude Code to apply it — both commands print "Restart to apply changes," and a new
+terminal tab alone isn't enough if you're running the VS Code extension; use "Developer: Reload
+Window" or fully restart the app.
+
+**If the update reports success but the skill still doesn't show up**, check these in order:
+
+```bash
+# 1. Marketplace actually has the new commit
+cat ~/.claude/plugins/known_marketplaces.json | grep -A3 splunk-expert-marketplace
+
+# 2. Which version/scope is actually installed
+cat ~/.claude/plugins/installed_plugins.json
+
+# 3. Skill folder physically present in cache
+ls ~/.claude/plugins/cache/splunk-expert-marketplace/splunk-expert/<version>/skills/
+
+# 4. Plugin is enabled in the scope you're using
+grep -A3 enabledPlugins ~/.claude/settings.json ~/.claude/settings.local.json .claude/settings.json 2>/dev/null
+```
+
+The most common cause: `claude plugin update` defaults to `--scope user`. If the plugin was
+installed at `project` or `local` scope instead, pass that scope explicitly, e.g.
+`claude plugin update splunk-expert@splunk-expert-marketplace --scope project`.
 
 ## Usage
 
@@ -85,7 +118,7 @@ Both are auto-updated on every push to `main` via `.github/workflows/update-docs
 
 ## Versioning
 
-Current version: **1.3.0** — 27 skills. Added `splunk-app-packaging`.
+Current version: **1.3.1** — 27 skills. `splunk-dashboards` now also covers validating classic Simple XML views (`xmllint`) before shipping.
 
 ## License
 
